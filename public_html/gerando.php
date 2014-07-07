@@ -205,6 +205,9 @@ function calcular(v_count,faixa_ini,faixa_fim,cep_uso,peso_ini,peso_fim,peso_med
     $(progress_id).css("width",progress_percent + "%")
     $(progress_id).html(parseFloat(progress_percent).toFixed(2) + "%");
 
+    peso_ini = parseInt(parseFloat(peso_ini) * 1000);
+    peso_fim = parseInt(parseFloat(peso_fim) * 1000);
+
     linha = faixa_ini + ";" + faixa_fim + ";" + peso_ini + ";" + peso_fim + ";" + data.Valor + ";0;0;0;" + data.PrazoEntrega + ";BRA;\n";
     
     csv += linha;
