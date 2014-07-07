@@ -90,6 +90,21 @@ $( document ).ready(function() {
     </div>
   </div>
   <div class="form-group">
+    <label for="inputState" class="col-sm-4 control-label">Margem de segurança
+    <span class="help-block">Cobrado a mais sobre o valor original</span>
+    </label>
+    <div class="col-sm-8">
+      <select class="form-control input-lg" name="margem_seguranca">
+        <option value="0">0%</option>
+        <option value="5">5%</option>
+        <option value="10">10%</option>
+        <option value="15">15%</option>
+        <option value="20">20%</option>
+        <option value="25">25%</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group">
     <label for="inputState" class="col-sm-4 control-label">Código Administrativo
     <span class="help-block">Está no seu cartão dos correios</span>
     </label>
