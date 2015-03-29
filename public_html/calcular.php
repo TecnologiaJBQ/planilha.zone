@@ -31,8 +31,8 @@ function calculaFrete($cod_servico, $cep_origem, $cep_destino, $peso, $cod_adm, 
         return false;
 }
 
-$xml = calculaFrete(41106,'22031-072','22031-072','1.25','','');
-// $xml = calculaFrete($_GET['codigo_servico'],$_GET['cepOrigem'],$_GET['cepDestino'],$_GET['peso'],$_GET['codigo_administrativo'],$_GET['senha']);
+// $xml = calculaFrete(41106,'22031-072','22031-072','1.25','','');
+$xml = calculaFrete($_GET['codigo_servico'],$_GET['cepOrigem'],$_GET['cepDestino'],$_GET['peso'],$_GET['codigo_administrativo'],$_GET['senha']);
 
 $xml->Valor = str_replace(",",".",$xml->Valor);
 
