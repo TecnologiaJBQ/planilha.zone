@@ -42,7 +42,7 @@ function calculaFrete($cod_servico, $cep_origem, $cep_destino, $peso, $cod_adm, 
     ############################################
 
     $correios = "http://ws.correios.com.br/calculador/CalcPrecoPrazo.aspx?nCdEmpresa=".$cod_adm."&sDsSenha=".$senha."&sCepOrigem=".$cep_origem."&sCepDestino=".$cep_destino."&nVlPeso=".$peso."&nCdFormato=1&nVlComprimento=".$comprimento."&nVlAltura=".$altura."&nVlLargura=".$largura."&sCdMaoPropria=n&nVlValorDeclarado=".$valor_declarado."&sCdAvisoRecebimento=n&nCdServico=".$cod_servico."&nVlDiametro=0&StrRetorno=xml";
-    $xml = simplexml_load_file_from_url($correios,15);
+    $xml = simplexml_load_file_from_url($correios,8);
     
     print $xml."\n";
     
