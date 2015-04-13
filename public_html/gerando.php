@@ -383,7 +383,7 @@ var FAIXAS_PESO = [
 ];
 <?php } ?>
 
-csv = "ZipCodeStart;ZipCodeEnd;WeightStart;WeightEnd;AbsoluteMoneyCost;PricePercent;PriceByExtraWeight;MaxVolume;TimeCost;Country\n";
+csv = '"ZipCodeStart","ZipCodeEnd","WeightStart","WeightEnd","AbsoluteMoneyCost","PricePercent","PriceByExtraWeight","MaxVolume","TimeCost","Country"' + "\n";
 
 function calcular(v_count,faixa_ini,faixa_fim,cep_uso,peso_ini,peso_fim,peso_medio) {
 
