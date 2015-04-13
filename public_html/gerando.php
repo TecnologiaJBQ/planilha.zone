@@ -413,7 +413,7 @@ function calcular(v_count,faixa_ini,faixa_fim,cep_uso,peso_ini,peso_fim,peso_med
 
     margem_seguranca = <?php echo $_GET["margem_seguranca"] ?>;
     valor = (parseFloat(valor) * (parseInt(margem_seguranca)/100)) + parseFloat(valor);
-
+    valor = valor.toFixed(2);
     valor = valor.toString().replace(",",".");
 
     linha = '"' + faixa_ini.replace("-","") + '","' + faixa_fim.replace("-","") + '","' + peso_ini + '","' + peso_fim + '","' + valor + '","0","0","10000000","' + data.PrazoEntrega + '","BRA",' + "\n";
