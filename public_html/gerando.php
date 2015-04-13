@@ -416,7 +416,7 @@ function calcular(v_count,faixa_ini,faixa_fim,cep_uso,peso_ini,peso_fim,peso_med
 
     valor = valor.toString().replace(".",",");
 
-    linha = '"' + faixa_ini.replace("-","") + '","' + faixa_fim.replace("-","") + '","' + peso_ini + '","' + peso_fim + '","' + valor + ',0,0,10000000,' + data.PrazoEntrega + ",BRA,\n";
+    linha = '"' + faixa_ini.replace("-","") + '","' + faixa_fim.replace("-","") + '","' + peso_ini + '","' + peso_fim + '","' + valor + '","0","0","10000000","' + data.PrazoEntrega + '","BRA",' + "\n";
     
     csv += linha;
 
