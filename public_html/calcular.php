@@ -69,7 +69,7 @@ $xml = calculaFrete($_GET['codigo_servico'],$_GET['cepOrigem'],$_GET['cepDestino
 
 if ($xml) {
     $xml->Valor = str_replace(",",".",$xml->Valor);
-    print '{ "Valor": "'.$xml->Valor.'", "PrazoEntrega": "'.$xml->PrazoEntrega.'"}'; 
+    print '{ "Valor": "'.sprintf("%.2f",$xml->Valor).'", "PrazoEntrega": "'.$xml->PrazoEntrega.'"}'; 
 }
 
 else {
