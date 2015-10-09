@@ -365,8 +365,6 @@ if ($_GET["codigo_servico"] == "40215" || $_GET["codigo_servico"] == "40290") {
 
 <script>
 
-csv = "ZipCodeStart;ZipCodeEnd;WeightStart;WeightEnd;AbsoluteMoneyCost;PricePercent;PriceByExtraWeight;MaxVolume;TimeCost;Country\n";
-
 <?php if ($_GET["codigo_servico"] == "81019" || $_GET["codigo_servico"] == "40215" || $_GET["codigo_servico"] == "40290") { ?>
 var FAIXAS_PESO = [
     [0.0, 0.3], [0.3, 0.5], [0.5, 0.75], [0.75, 1.0], [1.0, 1.5], [1.5, 2.0], [2.0, 2.5], [2.5, 3.0], [3.0, 3.5],
@@ -383,7 +381,7 @@ var FAIXAS_PESO = [
 ];
 <?php } ?>
 
-csv = '"ZipCodeStart","ZipCodeEnd","WeightStart","WeightEnd","AbsoluteMoneyCost","PricePercent","PriceByExtraWeight","MaxVolume","TimeCost","Country"' + "\n";
+csv = '"ZipCodeStart","ZipCodeEnd","PolygonName","WeightStart","WeightEnd","AbsoluteMoneyCost","PricePercent","PriceByExtraWeight","MaxVolume","TimeCost","Country","MinimumValueInsurance"' + "\n";
 
 function calcular(v_count,faixa_ini,faixa_fim,cep_uso,peso_ini,peso_fim,peso_medio) {
 
@@ -416,7 +414,7 @@ function calcular(v_count,faixa_ini,faixa_fim,cep_uso,peso_ini,peso_fim,peso_med
     valor = valor.toFixed(2);
     valor = valor.toString().replace(",",".");
 
-    linha = '"' + faixa_ini.replace("-","") + '","' + faixa_fim.replace("-","") + '","' + peso_ini + '","' + peso_fim + '","' + valor + '","0","0","10000000","' + data.PrazoEntrega + '","BRA",' + "\n";
+    linha = '"' + faixa_ini.replace("-","") + '","' + faixa_fim.replace("-","") + '","","' + peso_ini + '","' + peso_fim + '","' + valor + '","0","0","10000000","' + data.PrazoEntrega + '","BRA","0"' + "\n";
     
     csv += linha;
 
